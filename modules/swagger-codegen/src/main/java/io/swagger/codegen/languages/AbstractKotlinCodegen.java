@@ -532,6 +532,10 @@ public abstract class AbstractKotlinCodegen extends DefaultCodegen implements Co
             word = word.replaceAll("\\Q_\\E", "Underscore");
         }
 
+        if (word.contains(".") {
+            word = word.replaceAll(".", "_")
+        }
+
         return word;
     }
 
